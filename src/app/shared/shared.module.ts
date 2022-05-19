@@ -10,6 +10,10 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     FooterComponent
   ],
+  exports: [
+    NavbarComponent,
+    FooterComponent
+  ],
   imports: [
     CommonModule
   ]
