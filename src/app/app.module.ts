@@ -8,6 +8,11 @@ import { PagesModule } from './pages/pages.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material/material.module';
+import { ComponentsModule } from './components/components.module';
+
+import { HttpClientModule } from '@angular/common/http';
+import { MarkerService } from './services/marker.service';
+import { PopupService } from './services/popup.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +25,14 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     PagesModule,
     SharedModule,
-    MaterialModule
+    MaterialModule, 
+    ComponentsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    MarkerService,
+    PopupService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

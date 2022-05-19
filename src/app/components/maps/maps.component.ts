@@ -1,15 +1,53 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import * as L from 'leaflet';
+import { MarkerService } from 'src/app/services/marker.service';
+
+const iconRetinaUrl = 'assets/marker-icon-2x.png';
+const iconUrl = 'assets/marker-icon.png';
+const shadowUrl = 'assets/marker-shadow.png';
+const iconDefault = L.icon({
+  iconRetinaUrl,
+  iconUrl,
+  shadowUrl,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  tooltipAnchor: [16, -28],
+  shadowSize: [41, 41]
+});
+L.Marker.prototype.options.icon = iconDefault;
+
 
 @Component({
   selector: 'app-maps',
   templateUrl: './maps.component.html',
   styleUrls: ['./maps.component.scss']
 })
-export class MapsComponent implements OnInit {
+export class MapsComponent implements AfterViewInit {
 
-  constructor() { }
+  private map: any;
 
-  ngOnInit(): void {
+  public data_markers = [];
+  private initMap(): void {
+    this.map = L.map('map', {
+      center: [ 41.400, 2.206 ],
+      zoom: 9
+    });
+
+    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      minZoom: 3,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+
+    tiles.addTo(this.map);
+  }
+
+  constructor(private markerService: MarkerService) { }
+
+  ngAfterViewInit(): void {
+    this.initMap();
+    this.markerService.makeCapitalMarkers(this.map);
   }
 
 }

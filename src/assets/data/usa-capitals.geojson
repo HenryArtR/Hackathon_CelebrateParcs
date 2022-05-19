@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+    {
+    "type": "Feature",
+    "geometry": {
+    "type": "Point",
+    "coordinates": [ 
+    2.16992,
+    41.3879
+    ]
+    },
+    "properties": {
+    "state": "Alabama",
+    "name": "Montgomery",
+    "population": 199518
+    }
+    }
+]
+}
