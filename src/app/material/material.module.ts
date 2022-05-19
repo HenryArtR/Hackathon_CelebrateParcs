@@ -5,6 +5,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -15,7 +17,9 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatSidenavModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatStepperModule,
+    MatFormFieldModule
   ]
 })
 export class MaterialModule { }

@@ -1,0 +1,48 @@
+<mat-stepper #stepper class="bg-primary">
+    <mat-step>
+        <ng-template matStepLabel>Fiesta!!</ng-template>
+        <h1>Te gustaria celebrar el cumpleaños de tu hijo/a en uno de los parques de barcelona?</h1>
+        <p>Pues esta aplicacion es perfecta para ti!! Te facilitamos toda la informacion que necesitas para planear la actividad deseada</p>
+        <div>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Muy facilito!!</ng-template>
+        <h1>Con tan solo unos clicks tendras toda la informacion en menos de 3 min!!</h1>
+        <ul>
+            <li>Parques cerca de tu barrio</li>
+            <li>Numero de personas que han hecho la reserva en el parque</li>
+            <li>Y mucho mas!!!!</li>
+        </ul>
+
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+    </mat-step>
+
+    <mat-step>
+        <ng-template matStepLabel>Login</ng-template>
+        <h1>Para mayor seguridad se necesita estar logeado en la app para que sepamos que eres un padre/madre de confianza</h1>
+        <p>Porque mientras mas seamos mas nos divertiremos, los adultos con los adultos y los peques con los peques</p>
+        
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+    </mat-step>
+    
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div class="d-flex justify-content-center">
+            <div class="bg-login">
+                <div class="vh-100 vw-100">
+                  <button mat-raised-button matStepperPrevious>Back</button>
+                  <button mat-raised-button (click)="stepper.reset()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </mat-step>
+  </mat-stepper>
+  
