@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataCard } from 'src/app/interfaces/dataCard.interface';
+import { DataPagesService } from 'src/app/services/data-pages.service';
 
 @Component({
   selector: 'app-cards',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
 
-  constructor() { }
+  cardInfo: DataCard[] = [] 
+
+  constructor(private dataCard: DataPagesService) { }
 
   ngOnInit(): void {
+    this.cardInfo = this.dataCard.cardData
   }
 
 }
