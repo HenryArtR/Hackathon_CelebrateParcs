@@ -12,6 +12,10 @@ import { MapsComponent } from './maps/maps.component';
   ],
   imports: [
     CommonModule
+    
+  ],
+  exports: [
+    MapsComponent
   ]
 })
 export class ComponentsModule { }
