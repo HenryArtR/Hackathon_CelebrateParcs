@@ -4,6 +4,8 @@
 
 -`Componentes:` Aqui van todos los componentes que tengan que ver con la app que por ahora son las cards y los mapas.
 
+-`Material:` Carpeta creada solo para los modulos de Material de angular, asi al importar este modulo correran todos los componentes que lo necesiten.
+
 -`Pages:` Tambien son componentes pero tienen mas la estructura de una página porque contienen otros componentes como los que se encuentran en la carpeta anterior
 
 -`Services:` aqui van todas las peticiones al back-end y he agregado una especial que es donde se guardaran los datos de la página como los titulos, las descripciones, las infos que podamos necesitar en las páginas/componentes
