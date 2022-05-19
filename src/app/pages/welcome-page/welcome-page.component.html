@@ -1,8 +1,8 @@
-<mat-stepper #stepper class="bg-primary">
+<mat-stepper #stepper class="bg-primary vh-100">
     <mat-step>
         <ng-template matStepLabel>Fiesta!!</ng-template>
-        <h1>Te gustaria celebrar el cumpleaños de tu hijo/a en uno de los parques de barcelona?</h1>
-        <p>Pues esta aplicacion es perfecta para ti!! Te facilitamos toda la informacion que necesitas para planear la actividad deseada</p>
+        <h1 class="text-center">Te gustaria celebrar el cumpleaños de tu hijo/a en uno de los parques de barcelona?</h1>
+        <p class="text-center">Pues esta aplicacion es perfecta para ti!! Te facilitamos toda la informacion que necesitas para planear la actividad deseada</p>
         <div>
             <button mat-button matStepperNext>Next</button>
         </div>
@@ -35,12 +35,11 @@
     
     <mat-step>
         <ng-template matStepLabel>Done</ng-template>
-        <div class="d-flex justify-content-center">
-            <div class="bg-login">
-                <div class="vh-100 vw-100">
-                  <button mat-raised-button matStepperPrevious>Back</button>
-                  <button mat-raised-button (click)="stepper.reset()">Reset</button>
-                </div>
+        <div class="d-flex justify-content-center">         
+            
+            <div class="vh-100 vw-100">
+                <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+                <button mat-raised-button color="accent" [routerLink]="['/home']" routerLinkActive="router-link-active" >Empezar!!</button>
             </div>
         </div>
     </mat-step>
