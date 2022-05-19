@@ -1,46 +1,64 @@
-<mat-stepper #stepper class="bg-primary vh-100">
+<mat-stepper #stepper class="bg-stepper vh-100" labelPosition="bottom">
     <mat-step>
         <ng-template matStepLabel>Fiesta!!</ng-template>
-        <h1 class="text-center">Te gustaria celebrar el cumpleaños de tu hijo/a en uno de los parques de barcelona?</h1>
-        <p class="text-center">Pues esta aplicacion es perfecta para ti!! Te facilitamos toda la informacion que necesitas para planear la actividad deseada</p>
-        <div>
-            <button mat-button matStepperNext>Next</button>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-10 col-md-6 col-lg-5 bg-text">
+                <h1 class="p-4">Te gustaria celebrar el cumpleaños de tu hijo/a en uno de los parques de barcelona?</h1>
+                <p class="text-center">Pues esta aplicacion es perfecta para ti!! Te facilitamos toda la informacion que necesitas para planear la actividad deseada</p>
+                <div class="d-flex justify-content-end align-items-end">
+                    <button mat-raised-button matStepperNext color="primary">Next</button>
+                </div>
+                
+            </div>
+            <div class="col"></div>
         </div>
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>Muy facilito!!</ng-template>
-        <h1>Con tan solo unos clicks tendras toda la informacion en menos de 3 min!!</h1>
-        <ul>
-            <li>Parques cerca de tu barrio</li>
-            <li>Numero de personas que han hecho la reserva en el parque</li>
-            <li>Y mucho mas!!!!</li>
-        </ul>
-
-        <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-10 bg-text">
+                <h1 class="p-4">Con tan solo unos clicks tendras toda la informacion en menos de 3 min!!</h1>
+                <ul>
+                    <li>Parques cerca de tu barrio</li>
+                    <li>Numero de personas que han hecho la reserva en el parque</li>
+                    <li>Y mucho mas!!!!</li>
+                </ul>
+                <div class="d-flex justify-content-between align-items-end">
+                    <button mat-raised-button matStepperPrevious color="accent">Back</button>
+                    <button mat-raised-button matStepperNext color="primary">Next</button>
+                </div>
+                
+            </div>
+            <div class="col"></div>
+        </div>
+        
+         
     </mat-step>
 
     <mat-step>
         <ng-template matStepLabel>Login</ng-template>
-        <h1>Para mayor seguridad se necesita estar logeado en la app para que sepamos que eres un padre/madre de confianza</h1>
-        <p>Porque mientras mas seamos mas nos divertiremos, los adultos con los adultos y los peques con los peques</p>
+        <div class="d-flex justify-content-center">
+            <div>
+                <h1>Para mayor seguridad se necesita estar logeado en la app para que sepamos que eres un padre/madre de confianza</h1>
+                <p>Porque mientras mas seamos mas nos divertiremos, los adultos con los adultos y los peques con los peques</p>
+            </div>
+
+        </div>
+            
+            <button mat-raised-button matStepperPrevious color="accent">Back</button>
+            <button mat-raised-button matStepperNext color="primary">Next</button>
         
-        <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </div>
+        
+
     </mat-step>
     
     <mat-step>
         <ng-template matStepLabel>Done</ng-template>
-        <div class="d-flex justify-content-center">         
-            
-            <div class="vh-100 vw-100">
-                <button mat-raised-button color="accent" matStepperPrevious>Back</button>
-                <button mat-raised-button color="accent" [routerLink]="['/home']" routerLinkActive="router-link-active" >Empezar!!</button>
-            </div>
+        <div class="d-flex justify-content-center">          
+            <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+            <button mat-raised-button color="primary" [routerLink]="['/home']" routerLinkActive="router-link-active" >Empezar!!</button>       
         </div>
     </mat-step>
   </mat-stepper>
