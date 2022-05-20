@@ -20,6 +20,7 @@ export class MarkerService {
       for (const c of res) {
         const lon = parseFloat(c.geo_epgs_25831_x);
         const lat = parseFloat(c.geo_epgs_25831_y);
+        
         //const marker = L.marker([lat, lon]);
         const marker = L.marker([41.400, 2.206]);
 
@@ -29,6 +30,8 @@ export class MarkerService {
         marker.addTo(map);
 
         console.log(parseFloat(c.geo_epgs_25831_x));
+        console.log(L.latLng);
+
         console.log("marker"+L.marker);
         console.log(c.name);
         console.log(lat+ " " +lon)
