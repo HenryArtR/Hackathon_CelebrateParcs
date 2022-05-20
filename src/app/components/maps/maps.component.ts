@@ -47,7 +47,7 @@ export class MapsComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.initMap();
-    this.markerService.makeCapitalMarkers(this.map);
+    this.markerService.makeParksMarkers(this.map);
   }
 
 }
