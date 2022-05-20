@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row" *ngFor="let item of dataParc">
+        <div class="col col-lg-6 m-3" >
+            <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <p class="fw-bold">{{item.id}}. {{item.name}}</p>                
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      {{item.district}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div class="px-2">
+                      <p class="fw-semibold">Direccion: <span>{{item.road_name}}, {{item.road_number}}</span></p>
+                      <p></p>
+                      <p class="fw-semibold">Codigo Postal: <span>{{item.postalCode}}</span></p>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+</div>
+  

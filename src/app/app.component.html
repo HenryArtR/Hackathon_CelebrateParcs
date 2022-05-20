@@ -3,9 +3,11 @@
       <p>Auto-resizing sidenav</p>
       
     </mat-drawer>
-  
+    <app-navbar></app-navbar>
     <router-outlet></router-outlet>
+    <app-footer></app-footer>
 </mat-drawer-container>
+
 <button mat-icon-button class="btn-position" (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
 </button>

@@ -7,12 +7,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 2;
 }
 
 .bg-text {
     background-color: rgba(253, 251, 251, 0.486);
     border-radius: 15px;
-    height: 450px;
+    min-height: 400px;
     position: relative;
 }
 
@@ -27,3 +28,4 @@ h1 {
     color: rgb(60, 100, 27);
     font-weight: 500;
 }
+

@@ -8,6 +8,9 @@ import { ComponentsModule } from '../components/components.module';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GetAllComponent } from './get-all/get-all.component';
+import { HoodComponent } from './hood/hood.component';
+import { PostalcodeComponent } from './postalcode/postalcode.component';
 
 
 
@@ -15,7 +18,13 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     HomeComponent,
     LoginComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    GetAllComponent,
+    HoodComponent,
+    PostalcodeComponent
+  ],
+  exports: [
+    LoginComponent
   ],
   imports: [
     CommonModule,

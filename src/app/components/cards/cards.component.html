@@ -1,10 +1,10 @@
 
 <div class="container p-4">
     <div class="row" >
-        <div class="col-4"  *ngFor="let info of cardInfo">
+        <div class="col-4"  *ngFor="let info of cardInfo; let i=index">
             <div class="card mb-4">
                 <img [src]="info.img" class="card-img-top" alt="...">
-                <button mat-raised-button color="accent">{{info.title}}</button>
+                <button mat-raised-button color="accent" (click)="goToPage(i)">{{info.title}}</button>
             </div>
         </div>
     </div>

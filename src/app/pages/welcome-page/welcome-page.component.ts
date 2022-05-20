@@ -8,23 +8,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class WelcomePageComponent implements OnInit {
 
-  
+  titulo = 'Registro'
 
-  loginForm: FormGroup;
+  myForm: FormGroup;
   
 
   constructor(fb: FormBuilder) {
-    this.loginForm = fb.group(
+    this.myForm = fb.group(
       {email: ['', Validators.required]}
     );
   }
 
   getErrorMessage() {
-    if (this.loginForm.hasError('required')) {
+    if (this.myForm.hasError('required')) {
       return 'You must enter a value';
     }
 
-    return this.loginForm.hasError('email') ? 'Not a valid email' : '';
+    return this.myForm.hasError('email') ? 'Not a valid email' : '';
   }
 
   ngOnInit(): void {

@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div class="container d-flex justify-content-center">
+    <div *ngIf="registrado == false; else login">
+      <form [formGroup]="myForm" class="row m-5 p-2 bg-form" >
+          <mat-form-field appearance="legacy" class="p-2 col-12">
+              <mat-label>username</mat-label>
+              <input matInput placeholder="PepitoGrillo" formControlname="username" >
+              <mat-error *ngIf="myForm.invalid">Introduce un usuario</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="legacy" class="p-2 col-12">
+              <mat-label>contraseña</mat-label>
+              <input matInput placeholder="contraseña" formControlname="username" >
+          </mat-form-field>
+          <mat-form-field appearance="legacy" class="p-2 col-12">
+              <mat-label>dni</mat-label>
+              <input matInput  placeholder="123456789T" formControlname="username" >
+          </mat-form-field>
+          <p>ya estas registrado? haz click <span (click)="cambioLogin()">aquí</span></p>
+          
+      </form>
+    </div>
+
+    <ng-template #login>
+
+      <form [formGroup]="myForm" class="row m-5 p-2 bg-form">
+        
+        <mat-form-field appearance="legacy" class="p-2 col-12">
+            <mat-label>dni</mat-label>
+            <input matInput  placeholder="pat@example.com" formControlname="username" >
+            <mat-error *ngIf="myForm.invalid"></mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="legacy" class="p-2 col-12">
+            <mat-label>contraseña</mat-label>
+            <input matInput placeholder="pat@example.com" formControlname="username" >
+            <mat-error *ngIf="myForm.invalid"></mat-error>
+        </mat-form-field>
+        <p>No estas registrado? haz click <span (click)="cambioLogin()">aquí</span></p>
+
+    </form>
+
+    </ng-template>
+
+</div>
