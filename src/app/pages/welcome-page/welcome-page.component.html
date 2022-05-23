@@ -1,0 +1,92 @@
+
+<mat-stepper #stepper class="bg-stepper vh-100" labelPosition="bottom">
+    <mat-step>
+        <ng-template matStepLabel>Bienvenida</ng-template>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-6 col-lg-5 bg-text p-4">
+                <h1 class="p-4">Te gustaria celebrar el cumpleaños de tu hijo/a en uno de los parques de barcelona?</h1>
+                <p class="text-center">Pues esta aplicacion es perfecta para ti!! Te facilitamos toda la informacion que necesitas para planear la actividad deseada</p>
+                <div class="row justify-content-end mx-4">
+                    <button class="mt-5" mat-raised-button matStepperNext color="primary">Next</button>
+                </div>
+            </div>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Rápido</ng-template>
+
+
+
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-6 col-lg-5 bg-text p-4">
+                <h1 class="p-4">Con tan solo unos clicks tendras toda la informacion en menos de 3 min!!</h1>
+                <ul>
+                    <li>Parques cerca de tu barrio</li>
+                    <li>Numero de personas que han hecho la reserva en el parque</li>
+                    <li>Y mucho mas!!!!</li>
+                </ul>
+                <div class="row justify-content-between align-items-end p-4">
+                    <div class="col-6">
+                        <button class="w-100" mat-raised-button matStepperPrevious color="accent">Back</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="w-100" mat-raised-button matStepperNext color="primary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+             
+    </mat-step>
+
+    <mat-step >
+        
+        <ng-template matStepLabel>Seguridad y privacidad</ng-template>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-6 col-lg-5 bg-text p-4">   
+                <h1 class="p-4">Para mayor seguridad se necesita estar registrado en la app para que sepamos que eres un padre/madre de confianza</h1>
+                <div class="row justify-content-between align-items-end p-4">
+                    <div class="col-6">
+                        <button class="w-100" mat-raised-button matStepperPrevious color="accent">Back</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="w-100" mat-raised-button matStepperNext color="primary" routerLink="/login">Resgistro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </mat-step>
+    <mat-step >
+        
+        <ng-template matStepLabel>{{titulo}}</ng-template>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-6 col-lg-5 bg-text p-4">   
+                <h1 class="p-4">{{titulo}}</h1>
+
+                <app-login (cambioTitulo)="titulo = $event"></app-login>
+
+                <div class="row justify-content-between align-items-end p-4">
+                    <div class="col-6">
+                        <button class="w-100" mat-raised-button matStepperPrevious color="accent" routerLink="/">Back</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="w-100" mat-raised-button matStepperNext color="primary" routerLink="/">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </mat-step>
+    
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div class="d-flex justify-content-center">          
+            <button mat-raised-button color="accent" matStepperPrevious routerLink="/login">Back</button>
+            <button mat-raised-button color="primary" [routerLink]="['/home']" routerLinkActive="router-link-active" >Empezar!!</button>       
+        </div>
+    </mat-step>
+  </mat-stepper>
+
+
+  
+  

@@ -18,26 +18,22 @@ export class MarkerService {
   makeParksMarkers(map: L.Map): void {
     this.http.get(this.park).subscribe((res: any) => {
       for (const c of res) {
-        const lon = parseFloat(c.geo_epgs_25831_x);
-        const lat = parseFloat(c.geo_epgs_25831_y);
-        
-        //const marker = L.marker([lat, lon]);
-        const marker = L.marker([41.400, 2.206]);
 
+        const geoXPart1 = c.geo_epgs_4326_x.replace(/\.+/g, '');
+        const geoYPart1 = c.geo_epgs_4326_y.replace(/\.+/g, '');
+
+        const geoXDots = geoXPart1.substring(0, 2) + "." + geoXPart1.substring(2, geoXPart1.length);
+        const geoYDots = geoYPart1.substring(0, 1) + "." + geoYPart1.substring(1, geoYPart1.length);
+
+        const lat = parseFloat(geoXDots);
+        const lon = parseFloat(geoYDots);
+
+        const marker = L.marker([lat, lon]);
         
         marker.bindPopup(this.popupService.makeParksPopup(c));
 
         marker.addTo(map);
-
-        console.log(parseFloat(c.geo_epgs_25831_x));
-        console.log(L.latLng);
-
-        console.log("marker"+L.marker);
-        console.log(c.name);
-        console.log(lat+ " " +lon)
       }
     });
-
-
    }
 }

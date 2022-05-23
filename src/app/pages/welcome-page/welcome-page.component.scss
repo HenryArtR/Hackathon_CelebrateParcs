@@ -1,0 +1,31 @@
+.bg-login {
+    background-image: url('../../../assets/img/loginFondo.png');
+    background-repeat: no-repeat;
+}
+.bg-stepper {
+    background-image: url('../../../assets/img/stepper-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+
+.bg-text {
+    background-color: rgba(253, 251, 251, 0.486);
+    border-radius: 15px;
+    min-height: 400px;
+    position: relative;
+}
+
+
+p, ul {
+    font-size: 1.2rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(60, 100, 27);
+    font-weight: 500;
+}
+
