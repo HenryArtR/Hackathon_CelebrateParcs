@@ -7,11 +7,13 @@ export class PopupService {
 
   constructor() { }
 
-  makeCapitalPopup(data: any): string {
+  makeParksPopup(data: any): string {
     return `` +
-    `<div>Capital: ${ data.name }</div>` +
-    `<div>State: ${ data.state }</div>` +
-    `<div>Population: ${ data.population }</div>`
+    `<div>Nom: ${ data.name }</}</div>` +
+    `<div>Barri: ${ data.neighbourhood }</div>` +
+    `<div>Carrer: ${ data.road_name }</div>`+
+    `<div>Districte: ${ data.district }</div>`+
+    `<div>Codi Postal: ${ data.postalCode }</div>`
    }
 
 }
